@@ -2,34 +2,40 @@ package com.codercampus;
 
 public class CarsReport {
 
-	private String month;
+	private String date;
 
-	private String sales;
+	private Integer sales;
 
-	public CarsReport(String month, String sales) {
-		this.month = month;
+	public CarsReport(String date, Integer sales) {
+		this.date = date;
 		this.sales = sales;
 	}
 
-	public String getMonth() {
-		return month;
+
+
+	public String getDate() {
+		return date;
 	}
 
-	public void setMonth(String month) {
-		this.month = month;
+
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 
-	public String getSales() {
+
+
+	public Integer getSales() {
 		return sales;
 	}
 
-	public void setSales(String sales) {
+	public void setSales(Integer sales) {
 		this.sales = sales;
 	}
 
 	@Override
 	public String toString() {
-		return "CarsReport [month=" + month + ", sales=" + sales + "]";
+		return "CarsReport [month=" + date + ", sales=" + sales + "]";
 	}
 
 	

@@ -34,7 +34,7 @@ public class TeslaFileService {
 			{
 
 				car = line.split(",");
-				CarsReport report = new CarsReport(car[0], car[1]);
+				CarsReport report = new CarsReport (car[0], Integer.parseInt(car[1]));
 				cars.add(report);
 
 			}
