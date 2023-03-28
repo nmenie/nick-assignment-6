@@ -1,6 +1,7 @@
 package com.codercampus;
 
 import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -39,8 +40,8 @@ public class TeslaSales {
 				.collect(Collectors.summingInt(sales -> sales.getSales()));
 		System.out.println("Total Model 3 sales for 2019: " + totalSales_3_2019 + "\n");
 
-		System.out.println("The best month for model 3 was: " + bMonth1);
-		System.out.println("The worst month for model 3 was: " + wMonth1 + "\n");
+		System.out.println("The best month for model 3 was: " + bMonth1.getYear() + "-" + bMonth1.getMonth());
+		System.out.println("The worst month for model 3 was: " + wMonth1.getYear() + "-" + wMonth1.getMonth() + "\n");
 
 		System.out.println("Model S Yearly Sales Report");
 
@@ -63,8 +64,8 @@ public class TeslaSales {
 				.collect(Collectors.summingInt(sales -> sales.getSales()));
 		System.out.println("Total Model S sales for 2019: " + totalSales_S_2019 + "\n");
 
-		System.out.println("The best month for model S was: " + bMonth2);
-		System.out.println("The worst month for model S was: " + wMonth2 + "\n");
+		System.out.println("The best month for model S was: " + bMonth2.getYear() + "-" + bMonth2.getMonth());
+		System.out.println("The worst month for model S was: " + wMonth2.getYear() + "-" + wMonth2.getMonth() + "\n");
 
 		System.out.println("Model X Yearly Sales Report");
 
@@ -86,8 +87,8 @@ public class TeslaSales {
 				.collect(Collectors.summingInt(sales -> sales.getSales()));
 		System.out.println("Total Model X sales for 2019: " + totalSales_X_2019 + "\n");
 
-		System.out.println("The best month for model X was: " + bMonth3);
-		System.out.println("The worst month for model X was: " + wMonth3 + "\n");
+		System.out.println("The best month for model X was: " + bMonth3.getYear() + "-" + bMonth3.getMonth());
+		System.out.println("The worst month for model X was: " + wMonth3.getYear() + "-" + wMonth3.getMonth() + "\n");
 
 	}
 

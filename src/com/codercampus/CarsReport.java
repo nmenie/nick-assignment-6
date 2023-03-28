@@ -11,19 +11,13 @@ public class CarsReport {
 		this.sales = sales;
 	}
 
-
-
 	public String getDate() {
 		return date;
 	}
 
-
-
 	public void setDate(String date) {
 		this.date = date;
 	}
-
-
 
 	public Integer getSales() {
 		return sales;
@@ -38,5 +32,4 @@ public class CarsReport {
 		return "CarsReport [month=" + date + ", sales=" + sales + "]";
 	}
 
-	
 }
