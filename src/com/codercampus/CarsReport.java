@@ -1,21 +1,26 @@
 package com.codercampus;
 
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
 public class CarsReport {
 
-	private String date;
+	private YearMonth date;
 
 	private Integer sales;
 
 	public CarsReport(String date, Integer sales) {
-		this.date = date;
+        YearMonth dates = YearMonth.parse(date, DateTimeFormatter.ofPattern("MMM-yy", Locale.US));
+		this.date = dates;
 		this.sales = sales;
 	}
 
-	public String getDate() {
+	public YearMonth getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(YearMonth date) {
 		this.date = date;
 	}
 

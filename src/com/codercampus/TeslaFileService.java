@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TeslaFileService {
-	
+
 	public static List<CarsReport> fileReader(String fileName) {
 		List<CarsReport> cars = new ArrayList<>();
 
 		BufferedReader fileReader = null;
 		try {
-			fileReader=new BufferedReader(new FileReader(fileName));
+			fileReader = new BufferedReader(new FileReader(fileName));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -23,25 +23,25 @@ public class TeslaFileService {
 
 		String[] car = null;
 
-		String line;try {
+		String line;
+		try {
 			fileReader.readLine();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
-			while((line=fileReader.readLine())!=null)
-			{
+			while ((line = fileReader.readLine()) != null) {
 
 				car = line.split(",");
-				CarsReport report = new CarsReport (car[0], Integer.parseInt(car[1]));
+				CarsReport report = new CarsReport(car[0], Integer.parseInt(car[1]));
 				cars.add(report);
 
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			
+
 			try {
 				fileReader.close();
 			} catch (IOException e1) {
@@ -51,11 +51,5 @@ public class TeslaFileService {
 		}
 		return cars;
 	}
-	
-	public static YearMonth date(Integer year, Integer month) {
-		YearMonth bMonth = YearMonth.of(year, month);
-		return bMonth;
-	}
 
-	
 }
